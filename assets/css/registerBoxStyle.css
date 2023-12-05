@@ -1,0 +1,155 @@
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+        *:focus {
+            outline: none;
+        }
+        
+         :root {
+            --finalFont: 'Roboto', sans-serif;
+            --round: 10px;
+            --backgroundColor: linear-gradient(120deg, #8dc4e9, #0c1ea9);
+        }
+        
+        body {
+            background: var(--backgroundColor);
+            font-size: 16px;
+            color: #222;
+            font-family: var(--finalFont);
+            font-weight: 300;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .form {
+            position: relative;
+            margin: 50px auto;
+            width: 300px;
+            min-height: 100px;
+            box-sizing: border-box;
+            padding: 20px 30px;
+            align-self: center;
+            background: #FFF;
+            border-radius: var(--round);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        
+        .form-message.error {
+            margin-left: 24%;
+            font-size: 14px;
+            color: #f33a58;
+        }
+        
+        .form-message.success {
+            margin-left: 20%;
+            font-size: 14px;
+            color: #1dbfaf;
+        }
+        
+        .input-field {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 240px;
+            width: 100%;
+        }
+        
+        .input-field h4 {
+            padding-top: 12px;
+            text-align: center;
+        }
+        
+        .input-field .form-group {
+            display: flex;
+            margin-bottom: 10px;
+            flex-direction: column;
+            border-color: #1dbfaf;
+            margin-bottom: 10px;
+        }
+        
+        .form-control:hover {
+            border-color: #1dbfaf;
+        }
+        
+        .form-message {
+            font-size: 10px;
+            line-height: 1.6rem;
+            padding: 4px 0 0;
+            text-align: center;
+        }
+        
+        .form-control:hover {
+            border-color: #1dbfaf;
+        }
+        
+        .form-group.invalid .form-control {
+            border-color: #f33a58;
+        }
+        
+        .form-group.invalid .form-message {
+            color: #f33a58;
+        }
+        
+        .TextField,
+        .PasswordField {
+            display: block;
+            padding: 4px;
+            width: 100%;
+            height: 34px;
+            border: none;
+            border-bottom: 0.5px solid #AAA;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            margin-bottom: 4px;
+            transition: 0.2s ease;
+            border-radius: var(--round);
+        }
+        
+        .TextField:focus,
+        .PasswordField:focus {
+            border-bottom: 1px solid #16a085;
+            color: #16a085;
+            transition: 0.2s ease;
+        }
+        
+        #back-to-login,
+        #sign-up-button {
+            margin-top: 15px;
+            width: 100%;
+            height: 32px;
+            text-align: center;
+            background: var(--backgroundColor);
+            border: none;
+            outline: none;
+            border-radius: 25px;
+            color: #FFF;
+            font-family: var(--finalFont);
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: 0.1s ease;
+            cursor: pointer;
+        }
+        
+        .form-control:hover,
+        #sign-up-button:hover,
+        #sign-up-button:focus {
+            opacity: 0.8;
+            box-shadow: 0 1px 2px #1dbfaf;
+            transition: 0.2s ease;
+        }
+        
+        #sign-up-button:active {
+            opacity: 1;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            transition: 0.2s ease;
+        }
+        
+        .register-content {
+            text-align: center;
+            margin-bottom: 5px;
+        }

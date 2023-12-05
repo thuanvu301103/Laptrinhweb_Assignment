@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+    outline: none;
+}
+
+ :root {
+    --finalFont: 'Roboto', sans-serif;
+    --round: 10px;
+    --backgroundColor: linear-gradient(120deg, #8dc4e9, #0c1ea9);
+    --height: 340px;
+}
+
+body {
+    background: var(--backgroundColor);
+    font-size: 16px;
+    color: #222;
+    font-family: var(--finalFont);
+    font-weight: 300;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.form {
+    /* height: var(--height); */
+    position: relative;
+    margin: 100px auto;
+    width: 300px;
+    min-height: 100 px;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    align-self: center;
+    background: #FFF;
+    border-radius: var(--round);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 5px;
+    flex-direction: column;
+    border-color: #1dbfaf;
+    margin-bottom: 10px;
+}
+
+.form-message {
+    font-size: 12px;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+    text-align: left;
+}
+
+
+/* .form-message #response {
+
+} */
+
+.form-message.error {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #f33a58;
+}
+
+.form-message.success {
+    margin-left: 20%;
+    font-size: 12px;
+    color: #1dbfaf;
+}
+
+.form-control:hover {
+    border-color: #1dbfaf;
+}
+
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
+}
+
+#username-input,
+#password-input {
+    display: block;
+    padding: 4px;
+    width: 100%;
+    height: 34px;
+    border: none;
+    border-bottom: 0.5px solid #AAA;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 4px;
+    transition: 0.2s ease;
+    border-radius: var(--round);
+}
+
+#username-input:focus,
+#password-input:focus {
+    border-bottom: 1px solid #16a085;
+    color: #16a085;
+    transition: 0.2s ease;
+}
+
+#login-btn {
+    margin: 15px 0;
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    background: var(--backgroundColor);
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #FFF;
+    font-family: var(--finalFont);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+
+.social-signin:focus,
+.social-signin:hover,
+#login-btn:hover,
+#login-btn:focus {
+    opacity: 0.8;
+    box-shadow: 0 1px 2px #1dbfaf;
+    transition: 0.2s ease;
+}
+
+.social-signin:active,
+#login-btn:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#notMember {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #adadad;
+}
+
+#signup-link {
+    text-decoration: none;
+    color: #2691d9;
+}
+
+#forgotPassword {
+    color: #695555;
+    font-size: 12px;
+    position: relative;
+    left: 60%;
+}
+
+button.social-signin {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    transition: 0.2s ease;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+}
+
+button.social-signin:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+    left: 50%;
+}
+
+button.social-signin.twitter {
+    left: 100%;
+}
+
+button.social-signin.microsoft {
+    left: 0;
+}
+
+.bottom-icon {
+    position: absolute;
+    bottom: -2%;
+    left: 25%;
+    width: 100px;
+    height: 30px;
+}
