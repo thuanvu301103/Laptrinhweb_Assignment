@@ -8,9 +8,10 @@ class Pharmarcy
         $this->connection = new mysqli('localhost', 'root', '', 'webDB');
     }
 
-    public function getListPharmacy() {
+    public function getListPharmacy()
+    {
         $this->connect();
-        $sql_cmd = "SELECT * FROM pharmacy;";
+        $sql_cmd = "SELECT * FROM stores;";
         $result = $this->connection->query($sql_cmd);
 
         if ($result->num_rows == 0) {
@@ -24,5 +25,3 @@ class Pharmarcy
         }
     }
 }
-
-?>
