@@ -64,9 +64,123 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <header>
         <?php include "header.php";?>
     </header>
+=======
+    
+    <?php include "header.php";?>
+    <div style="height: 500px;">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="height: 500px;">
+                <div class="carousel-item active">
+                    <img src="../assets/banner1.jpg" class="d-block cimage" alt="image 1">
+                    <div class="carousel-caption d-none d-md-block text-white bg-dark bg-opacity-50">
+                        <h5>Sự đa dạng về kiểu mẫu</h5>
+                        <p>Với hàng trăm mẫu mã khác nhau đến từ các nhà sản xuất thời trang nổi tiếng.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/banner2.jpg" class="d-block cimage" alt="image 2">
+                    <div class="carousel-caption d-none d-md-block text-white bg-dark bg-opacity-50">
+                        <h5>Sự đa dạng về màu sắc</h5>
+                        <p>Đa dạng về màu sắc khác nhau đến từ các nhà sản xuất thời trang nổi tiếng. Thỏa sức lựa chọn</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/banner3.jpg" class="d-block cimage" alt="image 2">
+                    <div class="carousel-caption d-none d-md-block text-white bg-dark bg-opacity-50">
+                        <h5>Đa dang về độ tuổi</h5>
+                        <p>Hàng trăm lựa chọn cho các độ tuổi khác nhau.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="row py-4 justify-content-center">
+                <div class="d-flex justify-content-center col-lg-3 m-2">
+                    <div class="p-0 m-0 text-center">
+                        <h2 class="fw-bolder text-dark">200+</h2>
+                        <div class="text-secondary" style="font-size: 0.8rem;">International Brands</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center col-lg-3 m-2 border-start border-3">
+                    <div class="p-0 m-0 text-center">
+                        <h2 class="fw-bolder text-dark">2,000+</h2>
+                        <div class="text-secondary" style="font-size: 0.8rem;">High-Quality Products</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center col-lg-3 m-2 border-start border-3">
+                    <div class="p-0 m-0 text-center">
+                        <h2 class="fw-bolder text-dark">30,000+</h2>
+                        <div class="text-secondary" style="font-size: 0.8rem;">Happy Customers</div>
+                    </div>
+                </div>
+    </div>
+
+    <div class="row py-4 justify-content-center">
+        <div class="d-flex flex-column justify-content-center col-lg-10 m-2">
+            <h1 class="p-0 m-0 text-center fw-bolder text-dark">About Us</h1>
+            <div class="text-secondary" style="font-size: 1rem;">
+                <p>Chào mừng bạn đến với cửa hàng thời trang của chúng tôi - nơi mang đến cho bạn trải nghiệm mua sắm độc đáo và phong cách. 
+                Chúng tôi tự hào là điểm đến lý tưởng cho những người yêu thời trang, nơi bạn có thể khám phá những xu hướng mới nhất và 
+                tìm kiếm những chiếc trang phục phản ánh đẳng cấp và cá nhân.</p>
+                <p>Chúng tôi không chỉ là một cửa hàng, mà còn là điểm gặp gỡ của những người sành điệu và đam mê thời trang. Với sự đa dạng về kiểu dáng, 
+                chất liệu và màu sắc, chúng tôi cam kết đáp ứng mọi nhu cầu của bạn từ bộ sưu tập hàng ngày đến những bữa tiệc quan trọng.</p>
+                <p>Chất lượng là ưu tiên hàng đầu của chúng tôi. Chúng tôi luôn lựa chọn những sản phẩm chất lượng cao từ các nhãn hiệu uy 
+                tín để mang đến cho bạn sự thoải mái và tự tin mỗi khi diện trang phục của chúng tôi.</p>
+                <p>Không chỉ là nơi mua sắm, cửa hàng thời trang của chúng tôi còn là không gian sáng tạo và tận hưởng nghệ thuật thời trang. 
+                Chúng tôi tin rằng mỗi chiếc áo, mỗi chiếc quần là một tác phẩm nghệ thuật riêng, là cách bạn diễn đạt cái tôi và phong cách riêng của mình.</p>
+                <p>Hãy đồng hành cùng chúng tôi trên hành trình khám phá thế giới thời trang, nơi cái đẹp không chỉ xuất phát từ trang phục mà còn từ cách bạn 
+                tỏa sáng và biểu đạt bản thân. Cảm ơn bạn đã chọn chúng tôi, chúng tôi mong muốn bạn sẽ tận hưởng mỗi khoảnh khắc của trải nghiệm mua sắm tại 
+                cửa hàng thời trang của chúng tôi.</p>  
+            </div>
+        </div>
+        <!--div class="d-flex flex-column justify-content-center col-lg-5 m-2 border-start border-3">
+            <h2 class="p-0 m-0 text-center fw-bolder text-dark">Contact Us</h2>
+            <div class="text-secondary" style="font-size: 1rem;">
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fas fa-map-marker-alt"></i> 123 Main Street, Cityville
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i> +1 (555) 123-4567
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i> info@example.com
+                </li>
+                <li>
+                    <i class="fab fa-facebook"></i> <a href="https://www.facebook.com/example" target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+                </li>
+                <!-- Thêm các mạng xã hội khác tương tự -->
+            </ul>
+            
+            </div>
+        </div-->
+    </div>
+
+    <div class="fs-1 fw-bolder text-center">
+        Our store system
+    </div>
+    
+>>>>>>> 106572dc3de2fa22f7b5d5721591b10f50cf2f93
     <div class="map-body">
       <div class="row">
         <div class="col-sm-2">
