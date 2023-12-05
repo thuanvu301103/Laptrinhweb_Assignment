@@ -3,7 +3,7 @@
     <div class="fs-2" style="font-weight: 900;">
         <a href="/" class="text-decoration-none text-dark">Shop.co</a>
     </div>
-    <div class=" flex-row gap-2 align-items-center">
+    <div class="d-flex flex-row gap-2 overflow-x-hidden align-items-center">
         <button type="button" class="fw-bold bg-white btn-light btn fw-medium">Shop</button>
         <button type="button" class="fw-bold bg-white btn-light btn fw-medium">On Sale</button>
         <button type="button" class="fw-bold bg-white btn-light btn fw-medium">New Arrivals</button>
@@ -19,7 +19,7 @@
             </label>
         </form>
     </div>
-    <div class="flex-row gap-2 align-items-center">
+    <div class="flex-row gap-2 align-items-center flex-nowrap d-flex">
         <button type="button" title="Cart" class="bg-white btn-light btn fw-medium">
             <!-- cart icon button -->
             <iconify-icon icon="mdi:cart" color="black" width="30" height="30"></iconify-icon>
