@@ -131,7 +131,7 @@ while ($row = $storesList->fetch_assoc()) {
                 </div>
     </div>
 
-    <div class="row py-4 justify-content-center">
+    <div class="row py-4 px-5 justify-content-center">
         <div class="d-flex flex-column justify-content-center col-lg-10 m-2">
             <h1 class="p-0 m-0 text-center fw-bolder text-dark">About Us</h1>
             <div class="text-secondary" style="font-size: 1rem;">
