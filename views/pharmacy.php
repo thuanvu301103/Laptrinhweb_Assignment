@@ -67,9 +67,10 @@ while ($row = $storesList->fetch_assoc()) {
     
 </head>
 
-<body>
-    
-    <?php include "header.php";?>
+<body style="background-color: #F2F0F1;">
+    <div class="sticky-top">
+        <?php include "header.php";?>
+    </div>
     <div style="height: 500px;">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
