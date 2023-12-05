@@ -26,9 +26,24 @@
       <iconify-icon icon="mdi:cart" color="black" width="30" height="30"></iconify-icon>
     </button>
     <!-- account icon button -->
-    <button type="button" title="Account" class="bg-white btn-light btn fw-medium">
-      <iconify-icon icon="mdi:account" color="black" width="30" height="30"></iconify-icon>
-    </button>
+    <!-- admin account icon button -->
+    <a href="<?php
+              if (isset($_SESSION['id'])) {
+                echo "./profile?userid=" . $_SESSION['id'];
+              } else {
+                echo "./login";
+              }
+              ?>" class="bg-white btn-light btn fw-medium">
+      <?php if (isset($_SESSION['fullname'])) {
+        echo $_SESSION['fullname'];
+      } else {
+        echo "Login";
+      } ?>
+    </a>
+    <?php
+    if (isset($_SESSION['fullname'])) { ?>
+      <a href="../controllers/logout.php">Logout</a>
+    <?php } ?>
   </div>
   <script>
     $(document).ready(function() {
