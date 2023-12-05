@@ -11,16 +11,16 @@
       </div>
       <div>
         <a class="link-underline link-underline-opacity-0" href="#">
-          <img class="socialmedia" alt="twitter" src="./img/footer/tw.png">
+          <img class="socialmedia" alt="twitter" src="../assets/footer/tw.png">
         </a>
         <a class="link-underline link-underline-opacity-0" href="#">
-          <img class="socialmedia" alt="facebook" src="./img/footer/fb.png">
+          <img class="socialmedia" alt="facebook" src="../assets/footer/fb.png">
         </a>
         <a class="link-underline link-underline-opacity-0" href="#">
-          <img class="socialmedia" alt="github" src="./img/footer/gh.png">
+          <img class="socialmedia" alt="github" src="../assets/footer/gh.png">
         </a>
         <a class="link-underline link-underline-opacity-0" href="#">
-          <img class="socialmedia" alt="instargram" src="./img/footer/in.png">
+          <img class="socialmedia" alt="instargram" src="../assets/footer/in.png">
         </a>
       </div>
     </div>
@@ -67,11 +67,12 @@
       Shop.co © 2000-2023, All Rights Reserved
     </div>
     <div class="col-lg-6 mb-3 text-center text-lg-end">
-      <img class="payment p-0" alt="payment" src="./img/payment/visa.png">
-      <img class="payment p-0" alt="payment" src="./img/payment/master.png">
-      <img class="payment p-0" alt="payment" src="./img/payment/paypal.png">
-      <img class="payment p-0" alt="payment" src="./img/payment/applepay.png">
-      <img class="payment p-0" alt="payment" src="./img/payment/googlepay.png">
+      <img class="payment p-0" alt="payment" src="../assets/payment/visa.png">
+      <img class="payment p-0" alt="payment" src="../assets/payment/master.png">
+      <img class="payment p-0" alt="payment" src="../assets/payment/paypal.png">
+      <img class="payment p-0" alt="payment" src="../assets/payment/applepay.png">
+      <img class="payment p-0" alt="payment" src="../assets/payment/googlepay.png">
     </div>
   </div>
+  <link href="../assets/css/main.css" rel="stylesheet">
 </footer>

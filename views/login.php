@@ -18,11 +18,11 @@
     <nav class="navbar sticky-top" style="background-color: #FFFFFF;">
         <div class="align-item-start container-fluid">
             <a class="navbar-brand fs-3 fw-bolder px-5" href="#">SHOP.CO</a>
-           
+
             <!--Account-->
             <div class="mr-auto nav-item px-5">
                 <a class="nav-link" href="#">
-                    <i class="fa fa-question" aria-hidden="true"></i>   Need help
+                    <i class="fa fa-question" aria-hidden="true"></i> Need help
                 </a>
             </div>
         </div>
@@ -38,30 +38,28 @@
 
                 <span class="form-message" id="response" href="javascript: reload()"></span>
 
-                <input name="username" class="my-3 form-control text-secondary border border-0  rounded-pill form-control"
-                       id="username-input" type="text" placeholder="Email / username">
+                <input name="username" class="my-3 form-control text-secondary border border-0  rounded-pill form-control" id="username-input" type="text" placeholder="Email / username">
                 <span class="form-message" id="uname"></span>
 
-                <input name="password" class="my-3 form-control text-secondary border border-0  rounded-pill form-control"
-                       id="password-input" type="password" placeholder="Password">
+                <input name="password" class="my-3 form-control text-secondary border border-0  rounded-pill form-control" id="password-input" type="password" placeholder="Password">
                 <span class="form-message" id="uname"></span>
                 <span class="invalid-feedback email-pass-error"></span>
 
                 <div class="d-flex flex-row text-center">
-                <input type="submit" name="login_submit" value="Login" id="login-btn" class="btn btn-dark rounded-pill signin-btn" style="width: 15rem; margin-right: 2rem;">
-                </input>
-                <a href="./register" type="button" class="btn btn-light rounded-pill signin-btn border border-2 border-dark" style="width: 15rem;">
-                    Sign up
-                </a>
+                    <input type="submit" name="login_submit" value="Login" id="login-btn" class="btn btn-dark rounded-pill signin-btn" style="width: 15rem; margin-right: 2rem;">
+                    </input>
+                    <a href="./register" type="button" class="btn btn-light rounded-pill signin-btn border border-2 border-dark" style="width: 15rem;">
+                        Sign up
+                    </a>
                 </div>
                 <br>
                 <div id="forgotPassword">
                     Forgot password?
                 </div>
- 
-        
+
+
             </form>
-            
+
             <div class="row py-4">
                 <div class="col-5 col-lg-4 m-2">
                     <h2 class="fw-bolder text-dark">200+</h2>
@@ -80,11 +78,11 @@
             </div>
         </div>
         <div class="col-lg-5 p-0 text-center">
-            <img alt="background" style="object-fit: contain;" height="100%" src="./img/background.png">
+            <img alt="background" style="object-fit: contain;" height="100%" src="../assets/background.png">
         </div>
     </div>
     <?php include "footer.php" ?>
-    
+
 
     <script language="JavaScript" type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {

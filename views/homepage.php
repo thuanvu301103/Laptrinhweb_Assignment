@@ -56,7 +56,7 @@ include '../controllers/listProduct.controller.php';
             <div class="row">
                 <?php
                 while ($row = $listProduct->fetch_assoc()) {
-                    $imageURL = '../assets/images/' . $row['productname'] . '.jpeg';
+                    $imageURL = '../assets/images/' . $row['productname'] . '.jpg';
                 ?>
                     <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
 
@@ -68,9 +68,9 @@ include '../controllers/listProduct.controller.php';
                                     <h4><?php echo $row['productname']; ?></h4>
                                     <p><?php echo number_format($row['price'], 0) . "đ"; ?></p>
                                     <p>
-                                        <?php if (isset($_SESSION['fullname'])) { 
+                                        <?php if (isset($_SESSION['fullname'])) {
                                             $_SESSION['redirect_url'] = "../index.php/home";
-                                            ?>
+                                        ?>
 
                                     <form action="../controllers/cart_processing.php" method="POST">
                                         <input type="hidden" name="userID" value="<?php echo $_SESSION['id'] ?>" />
