@@ -10,10 +10,10 @@ if($connection->connect_error){
 $users = "INSERT INTO `users` (`uid`, `username`, `password`, `firstname`, `lastname`, `phone`, `role`)
 VALUES ('fda786c58c3c4', 'Admin12345', '1470aad22bf0f157d732ded7518e4568', 'Dangg', 'Nguyen', '0909999999', 'admin'), #Admin123
 ('d2a095d4abd64','Nhan12345','1470aad22bf0f157d732ded7518e4568','Nhan','Nguyen','0123456789', 'user'),
-('674611d4746c3','Phuc12345','1470aad22bf0f157d732ded7518e4568','Phuc','Tuong','0111111222', 'user'),
+('674611d4746c3','Phuc12345','1470aad22bf0f157d732ded7518e4568','Phuc','Tuong','0111111222', 'staff'),
 ('0c167e25767e4','Khuong12345','1470aad22bf0f157d732ded7518e4568','Khuong','Thai','0989686868', 'user')";
 
-$phars = "INSERT INTO `pharmacy`(`phid`, `name`, `latitude`, `longitude`)
+$stores = "INSERT INTO `stores`(`phid`, `name`, `latitude`, `longitude`)
 VALUES ('a43ed8d9c1874','ShopCo1', 10.77376426982302, 106.66056565582056),
 ('21e1a6590ec74','ShopCo2', 10.770890360902907, 106.65593515361698),
 ('21e3d6590ec25','ShopCo3', 10.7671, 106.666)";

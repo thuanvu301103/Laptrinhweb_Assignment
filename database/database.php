@@ -70,7 +70,7 @@ $belongto = "CREATE TABLE IF NOT EXISTS `belongto`(
     PRIMARY KEY (`productid`, `pharmacyid`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
-$pharmacytable = "CREATE TABLE IF NOT EXISTS `pharmacy`(
+$storetable = "CREATE TABLE IF NOT EXISTS `pharmacy`(
     `phid` VARCHAR(40) NOT NULL,
     `name` VARCHAR(100) NOT NULL UNIQUE,
     `latitude` FLOAT NOT NULL UNIQUE,
@@ -80,7 +80,7 @@ $pharmacytable = "CREATE TABLE IF NOT EXISTS `pharmacy`(
 
 
 $uchecker = $connection->query($usertable);
-$phchecker = $connection->query($pharmacytable);
+$phchecker = $connection->query($storetable);
 $pchecker = $connection->query($producttable);
 $incartchecker = $connection->query($incart);
 $tchecker = $connection->query($transactiontable);
