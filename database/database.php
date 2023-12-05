@@ -1,18 +1,18 @@
-<?php 
-include_once ('../views/config.php');
+<?php
+include_once('../views/config.php');
 
 $conn = new mysqli($servername, $username, $password);
 
 $db = "CREATE DATABASE IF NOT EXISTS webDB";
-if($conn->query($db) === TRUE){
+if ($conn->query($db) === TRUE) {
     echo "db created!";
-} else{ 
-    echo "ERROR: ". $conn->error;
+} else {
+    echo "ERROR: " . $conn->error;
 }
 
 $connection = new mysqli($servername, $username, $password, $dbname);
 
-if($connection->connect_error){
+if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 $connection->query($db);
@@ -57,7 +57,7 @@ $incart = "CREATE TABLE IF NOT EXISTS `incart`(
     `pharmacyid` VARCHAR(40),
     FOREIGN KEY (`productid`) REFERENCES `products` (`pid`),
     FOREIGN KEY (`userid`) REFERENCES `users`(`uid`),
-    FOREIGN KEY (`pharmacyid`) REFERENCES `pharmacy`(`phid`),
+    FOREIGN KEY (`pharmacyid`) REFERENCES `stores`(`phid`),
     PRIMARY KEY (`userid`, `productid`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
@@ -66,11 +66,11 @@ $belongto = "CREATE TABLE IF NOT EXISTS `belongto`(
     `productid` VARCHAR(40) NOT NULL,
     `quantity` INT NOT NULL,
     FOREIGN KEY (`productid`) REFERENCES `products` (`pid`),
-    FOREIGN KEY (`pharmacyid`) REFERENCES `pharmacy` (`phid`),
+    FOREIGN KEY (`pharmacyid`) REFERENCES `stores` (`phid`),
     PRIMARY KEY (`productid`, `pharmacyid`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
-$storetable = "CREATE TABLE IF NOT EXISTS `pharmacy`(
+$storetable = "CREATE TABLE IF NOT EXISTS `stores`(
     `phid` VARCHAR(40) NOT NULL,
     `name` VARCHAR(100) NOT NULL UNIQUE,
     `latitude` FLOAT NOT NULL UNIQUE,
@@ -86,22 +86,20 @@ $incartchecker = $connection->query($incart);
 $tchecker = $connection->query($transactiontable);
 $belong = $connection->query($belongto);
 
-if($uchecker != TRUE) {
-    echo "ERROR: ". $connection->error;
-} else if($tchecker !== TRUE) {
-    echo "ERROR: ". $connection->error;
+if ($uchecker != TRUE) {
+    echo "ERROR: " . $connection->error;
+} else if ($tchecker !== TRUE) {
+    echo "ERROR: " . $connection->error;
 } else if ($pchecker !== TRUE) {
-    echo "ERROR: ". $connection->error;
-} else if ($phchecker !== TRUE){
-    echo "ERROR: ". $connection->error;
-} else if ($belong !== TRUE){
-    echo "ERROR: ". $connection->error;
-} else if ($incartchecker !== TRUE){
-    echo "ERROR: ". $connection->error;
-} else  {
+    echo "ERROR: " . $connection->error;
+} else if ($phchecker !== TRUE) {
+    echo "ERROR: " . $connection->error;
+} else if ($belong !== TRUE) {
+    echo "ERROR: " . $connection->error;
+} else if ($incartchecker !== TRUE) {
+    echo "ERROR: " . $connection->error;
+} else {
     echo "tables created!";
 }
 
 $connection->close();
-
-?>

@@ -1,9 +1,9 @@
-<?php 
-include_once ('../views/config.php');
+<?php
+include_once('../views/config.php');
 
 $connection = new mysqli($servername, $username, $password, $dbname);
 
-if($connection->connect_error){
+if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
@@ -58,10 +58,10 @@ if ($connection->multi_query($users) === TRUE) {
     echo "Error: " . $connection->error;
 }
 
-if ($connection->multi_query($phars) === TRUE) {
+if ($connection->multi_query($stores) === TRUE) {
     echo "successfully ";
 } else {
-    echo "Error: ". $connection->error;
+    echo "Error: " . $connection->error;
 }
 if ($connection->multi_query($products) === TRUE) {
     echo "successfully ";
@@ -75,4 +75,3 @@ if ($connection->multi_query($belongto) === TRUE) {
 }
 
 $connection->close();
-?>
