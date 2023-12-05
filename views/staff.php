@@ -25,7 +25,7 @@ include '../controllers/listProduct.controller.php';
             margin: 5px 5px;
         }
         li {
-            padding-top: 2rem;
+            padding-top: 1rem;
         }
 
     </style>
@@ -46,43 +46,43 @@ include '../controllers/listProduct.controller.php';
     </nav>
     <div class="row" style="height: 45rem;">
         <div class="col-sm-2 col-lg-3 bg-dark px-5">
-            <ul class="nav nav-pills flex-column mb-auto" style="height: 530px;">
-                <li class="nav-item">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item w-100">
                     <a href="./homepage.php" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-home"></i>
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                             Home
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item w-100">
                     <a href="#" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-cube"></i>
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                             Order
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item w-100">
                     <a href="#" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-info"></i>
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                             Staff's Profile
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item w-100">
                     <a href="#" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-archive"></i>
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            Product Management
+                            Product
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item w-100">
                     <a href="#" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-internet-explorer"></i>
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                             Internet
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item w-100">
                     <a href="./pharmacy.php" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-question"></i>
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
