@@ -34,7 +34,7 @@ include '../controllers/listProduct.controller.php';
 <body style="background-color: #F2F0F1;">
     <nav class="navbar sticky-top" style="background-color: #FFFFFF;">
         <div class="align-item-start container-fluid">
-            <a class="navbar-brand fs-3 fw-bolder px-5" href="/index./home">SHOP.CO</a>
+            <a class="navbar-brand fs-3 fw-bolder px-5" href="/index.php/home">SHOP.CO</a>
 
             <!--Account-->
             <div class="mr-auto nav-item px-5">
