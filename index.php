@@ -12,6 +12,7 @@ include_once('controllers/admin.controller.php');
 include_once('controllers/addproduct.controller.php');
 include_once('controllers/editPassword.controller.php');
 include_once('controllers/pharmacy.controller.php');
+include_once('controllers/transaction.controller.php');
 
 $router = new Router();
 $router->addRoute('/home', function ($url) {
@@ -47,6 +48,11 @@ $router->addRoute('/product_detail', function ($url) {
 $router->addRoute('/cart', function ($url) {
 	$cart = new CartController();
 	print_r($cart->view($_GET['userid']));
+});
+
+$router->addRoute('/transaction', function ($url) {
+	$transaction = new TransactionController();
+	print_r($transaction->view($_GET['userid']));
 });
 
 $router->addRoute('/admin', function ($url) {
