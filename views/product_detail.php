@@ -24,7 +24,7 @@ include_once '../controllers/productDetail.controller.php';
   $imageURL = '../assets/images/' . $detail['productname'] . '.jpg';
   $amount = $productdetail->getAmount($_GET['id']);
   ?>
-  <main role="main" class="d-flex flex-column align-items-center">
+  <main role="main" class="d-flex flex-column align-items-center my-5">
     <div class="d-flex flex-row gap-4 align-items-stretch card p-4 w-75" style="height: 600px;">
       <img src="<?php echo $imageURL; ?>" alt="product image" class="img-fluid rounded-2 h-100 w-auto">
       <div class="d-flex flex-row justify-content-between align-items-stretch flex-fill">
@@ -66,10 +66,8 @@ include_once '../controllers/productDetail.controller.php';
         </div>
       </div>
     </div>
-    <footer>
-      <?php include "footer.php" ?>
-    </footer>
   </main>
+  <?php include "footer.php" ?>
 </body>
 <script>
   $(document).on('click', '.number-spinner button', function() {
