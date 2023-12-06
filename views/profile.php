@@ -15,7 +15,7 @@ $total = 0;
 
 <head>
 
-    <title>DrugStore</title>
+    <title>Clothes Shop</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +38,7 @@ $total = 0;
                     </a>
                 </li>
                 <li class="nav-item w-100">
-                    <a href="#" class="nav-link text-white" aria-current="page">
+                    <a href="<?php if(isset($_SESSION['id'])) {echo "./transaction?userid=".$_SESSION['id'];}?>" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-cube"></i>
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                             Order
