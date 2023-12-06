@@ -7,7 +7,7 @@ include_once '../controllers/admin.controller.php';
 ?>
 
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
   <title>Clothes Shop</title>

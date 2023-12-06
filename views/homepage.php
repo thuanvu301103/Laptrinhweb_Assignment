@@ -38,29 +38,27 @@ include '../controllers/listProduct.controller.php';
         .thumbnail {
             min-width: 208px;
         }
-    
+
         .cimage {
-            width: 100%; 
+            width: 100%;
             height: 250px;
-            object-fit: cover; 
+            object-fit: cover;
             opacity: 1;
         }
-        p {text-align: justify;}
+
+        p {
+            text-align: justify;
+        }
+
         a {
             text-align: justify;
         }
-    
-    .scrollable-div {
-      width: 100%; /* Set the width as needed */
-      height: 100rem; /* Set the height as needed */
-      overflow: auto; /* Add a scroll bar when content overflows */
-    }
-  </style>
+    </style>
 </head>
 
 <body style="background-color: #F2F0F1;">
     <div class="sticky-top">
-        <?php include "header.php";?>
+        <?php include "header.php"; ?>
     </div>
     <div style="height: 250px;">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -72,15 +70,15 @@ include '../controllers/listProduct.controller.php';
             <div class="carousel-inner" style="height: 250px;">
                 <div class="carousel-item active">
                     <img src="./img/banner1.jpg" class="d-block cimage" alt="image 1">
-                    
+
                 </div>
                 <div class="carousel-item">
                     <img src="./img/banner2.jpg" class="d-block cimage" alt="image 2">
-                    
+
                 </div>
                 <div class="carousel-item">
                     <img src="./img/banner3.jpg" class="d-block cimage" alt="image 2">
-                    
+
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -94,54 +92,54 @@ include '../controllers/listProduct.controller.php';
         </div>
     </div>
 
-    <div class="container p-5 scrollable-div">
+    <div class="p-2 w-100 d-flex flex-column align-items-center w-100 container mb-5">
         <div class="row">
             <?php
-                while ($row = $listProduct->fetch_assoc()) {
-                    $imageURL = '../assets/images/' . $row['productname'] . '.jpg';
+            while ($row = $listProduct->fetch_assoc()) {
+                $imageURL = '../assets/images/' . $row['productname'] . '.jpg';
             ?>
-            <div class="col-xs-4 col-sm-6 col-md-6 col-lg-4" >
-                
-                        <div class="card p-3">
-                            <img class="product-image" style="height: 20rem; object-fit: cover;" src="<?php echo $imageURL; ?>">
-                            <div class="card-body">
-                                <a href="./product_detail?id=<?php echo $row['pid'] ?>" class="card-title fs-5 p-0 m-0 fw-bold"
-                                    style="text-decoration: none;">
-                                    <?php echo $row['productname']; ?>
-                                </a>
-                                <div class="fs-6 text-danger p-3"><?php echo number_format($row['price'], 0) . "đ"; ?></div>
-                                <p>
-                                    <?php if (isset($_SESSION['fullname'])) {
-                                            $_SESSION['redirect_url'] = "../index.php/home";
-                                    ?>
+                <div class="col-xs-4 col-sm-6 col-md-6 col-lg-4">
 
-                                    <form action="../controllers/cart_processing.php" method="POST">
-                                        <input type="hidden" name="userID" value="<?php echo $_SESSION['id'] ?>" />
-                                        <input type="hidden" name="productID" value="<?php echo $row['pid'] ?>" />
-                                        <input type="hidden" name="quantity" value="1" />
-                                        <input type="submit" name="action" value="Add To Cart" class="btn btn-default" />
-                                        <input type="submit" name="action" value="Buy Now" class="btn btn-primary" />
-                                    </form>
+                    <div class="card p-3">
+                        <img class="product-image" style="height: 20rem; object-fit: cover;" src="<?php echo $imageURL; ?>">
+                        <div class="card-body">
+                            <a href="./product_detail?id=<?php echo $row['pid'] ?>" class="card-title fs-5 p-0 m-0 fw-bold" style="text-decoration: none;">
+                                <?php echo $row['productname']; ?>
+                            </a>
+                            <div class="fs-6 text-danger p-3"><?php echo number_format($row['price'], 0) . "đ"; ?></div>
+                            <p>
+                                <?php if (isset($_SESSION['fullname'])) {
+                                    $_SESSION['redirect_url'] = "../index.php/home";
+                                ?>
 
-                                <?php } else { ?>
-                                    <div class="row justify-content-center">
-                                        <a href="./login" class="btn btn-dark col-sm-11 col-md-5 col-lg-5 mx-2" role="button">Add to cart</a>
-                                        <a href="./login" class="btn btn-primary col-sm-11 col-md-5 col-lg-5 mx-2" role="button">Buy now</a>
-                                    </div>
-                                <?php } ?>
-                                </p>
+                            <form action="../controllers/cart_processing.php" method="POST">
+                                <input type="hidden" name="userID" value="<?php echo $_SESSION['id'] ?>" />
+                                <input type="hidden" name="productID" value="<?php echo $row['pid'] ?>" />
+                                <input type="hidden" name="quantity" value="1" />
+                                <input type="submit" name="action" value="Add To Cart" class="btn btn-default" />
+                                <input type="submit" name="action" value="Buy Now" class="btn btn-primary" />
+                            </form>
+
+                        <?php } else { ?>
+                            <div class="row justify-content-center">
+                                <a href="./login" class="btn btn-dark col-sm-11 col-md-5 col-lg-5 mx-2" role="button">Add to cart</a>
+                                <a href="./login" class="btn btn-primary col-sm-11 col-md-5 col-lg-5 mx-2" role="button">Buy now</a>
                             </div>
+                        <?php } ?>
+                        </p>
                         </div>
-            </div>
+                    </div>
+                </div>
             <?php } ?>
         </div>
     </div>
 
-    <?php include "footer.php" ?>
+    <?php include_once "footer.php" ?>
     <!-- Bootstrap JS dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
