@@ -19,7 +19,9 @@
 <body style="background-color: #F2F0F1;">
     <nav class="navbar sticky-top" style="background-color: #FFFFFF;">
         <div class="align-item-start container-fluid">
-            <a class="navbar-brand fs-3 fw-bolder px-5" href="#">SHOP.CO</a>
+            <div class="fs-2" style="font-weight: 900;">
+                <a href="/index.php/home" class="text-decoration-none text-dark">Shop.co</a>
+            </div>
 
             <!--Account-->
             <div class="mr-auto nav-item px-5">
