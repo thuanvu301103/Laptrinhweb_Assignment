@@ -69,6 +69,7 @@ include '../controllers/listProduct.controller.php';
             </div>
             <div class="carousel-inner" style="height: 250px;">
                 <div class="carousel-item active">
+<<<<<<< HEAD
                     <img src="../assets/banner1.jpg" class="d-block cimage" alt="image 1">
 
                 </div>
@@ -79,6 +80,15 @@ include '../controllers/listProduct.controller.php';
                 <div class="carousel-item">
                     <img src="../assets/banner3.jpg" class="d-block cimage" alt="image 2">
 
+=======
+                    <img src="../assets/background/banner_1.jpg" class="d-block cimage" alt="banner image">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/background/banner_2.jpg" class="d-block cimage" alt="banner image">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/background/banner_3.jpg" class="d-block cimage" alt="banner image">
+>>>>>>> 68ff2ebf951dbcae065779e79d8abc2d283176ec
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
