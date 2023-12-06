@@ -90,21 +90,21 @@ while ($row = $storesList->fetch_assoc()) {
             </div>
             <div class="carousel-inner" style="height: 500px;">
                 <div class="carousel-item active">
-                    <img src="../assets/background/banner_1.jpg" class="d-block cimage" alt="image 1">
+                    <img src="../../assets/background/banner_1.jpg" class="d-block cimage" alt="image 1">
                     <div class="carousel-caption d-none d-md-block text-white bg-dark bg-opacity-50">
                         <h5>Sự đa dạng về kiểu mẫu</h5>
                         <p>Với hàng trăm mẫu mã khác nhau đến từ các nhà sản xuất thời trang nổi tiếng.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/background/banner_2.jpg" class="d-block cimage" alt="image 2">
+                    <img src="../../assets/background/banner_2.jpg" class="d-block cimage" alt="image 2">
                     <div class="carousel-caption d-none d-md-block text-white bg-dark bg-opacity-50">
                         <h5>Sự đa dạng về màu sắc</h5>
                         <p>Đa dạng về màu sắc khác nhau đến từ các nhà sản xuất thời trang nổi tiếng. Thỏa sức lựa chọn</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/background/banner_3.jpg" class="d-block cimage" alt="image 2">
+                    <img src="../../assets/background/banner_3.jpg" class="d-block cimage" alt="image 2">
                     <div class="carousel-caption d-none d-md-block text-white bg-dark bg-opacity-50">
                         <h5>Đa dang về độ tuổi</h5>
                         <p>Hàng trăm lựa chọn cho các độ tuổi khác nhau.</p>

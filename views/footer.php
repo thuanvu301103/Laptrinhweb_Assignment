@@ -7,7 +7,7 @@
     <div class="col-lg-3 mb-3">
       <a class="navbar-brand fs-3 fw-bolder" href="#">SHOP.CO</a>
       <div class="text-secondary py-3">
-        We have clothes that suits your style and which you’re proud to wear. From women to men.
+        We have clothes that suits your style and which you're proud to wear. From women to men.
       </div>
       <div>
         <a class="link-underline link-underline-opacity-0" href="#">
@@ -28,7 +28,7 @@
     <div class="col-6 col-lg-2 offset-lg-1 mb-3" bis_skin_checked="1">
       <h5 class="text-uppercase py-3">Company</h5>
       <ul class="list-unstyled">
-        <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="../views/pharmacy.php">About</a></li>
+        <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="../index.php/pharmacy/map">About</a></li>
         <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="#">Features</a></li>
         <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="#">Works</a></li>
         <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="#">Career</a></li>
