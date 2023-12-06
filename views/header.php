@@ -3,7 +3,7 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <div class="fs-2" style="font-weight: 900;">
-    <a href="/" class="text-decoration-none text-dark">Shop.co</a>
+    <a href="/index.php/home" class="text-decoration-none text-dark">Shop.co</a>
   </div>
   <div class="flex-row gap-2 align-items-center w-25">
     <!-- search bar -->
@@ -16,14 +16,14 @@
     </form>
   </div>
   <div class="flex-row gap-2 align-items-center flex-nowrap d-flex">
-    <button type="button" title="Cart" class="bg-white btn-light btn fw-medium d-flex justify-content-center align-items-center">
+    <a href="/index.php/cart" title="Cart" class="bg-white btn-light btn fw-medium d-flex justify-content-center align-items-center">
       <!-- cart icon button -->
       <iconify-icon icon="mdi:cart" color="black" width="30" height="30"></iconify-icon>
-    </button>
+    </a>
     <!-- account icon button -->
-    <button type="button" title="Account" class="bg-white btn-light btn fw-medium d-flex justify-content-center align-items-center">
+    <a href="/index.php/profile" title="Account" class="bg-white btn-light btn fw-medium d-flex justify-content-center align-items-center">
       <iconify-icon icon="mdi:account" color="black" width="30" height="30"></iconify-icon>
-    </button>
+    </a>
   </div>
   <script>
     $(document).ready(function() {
