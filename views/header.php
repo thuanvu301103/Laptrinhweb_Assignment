@@ -42,6 +42,11 @@
               } ?>" title="Account" class="bg-white btn-light btn fw-medium d-flex justify-content-center align-items-center">
       <iconify-icon icon="mdi:account" color="black" width="30" height="30"></iconify-icon>
     </a>
+     <?php 
+        if(isset($_SESSION['role']) and $_SESSION['role'] == "staff" ){
+      ?>
+        <li><a href="./addproduct" title="Cart" class="bg-white btn-light btn fw-medium  align-items-center">Add Product</a></li>
+       <?php } ?>
   </div>
   <script>
     $(document).ready(function() {
