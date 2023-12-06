@@ -28,7 +28,7 @@
     <div class="col-6 col-lg-2 offset-lg-1 mb-3" bis_skin_checked="1">
       <h5 class="text-uppercase py-3">Company</h5>
       <ul class="list-unstyled">
-        <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="../index.php/pharmacy/map">About</a></li>
+        <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="../index.php/about">About</a></li>
         <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="#">Features</a></li>
         <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="#">Works</a></li>
         <li class="mb-2"><a class="text-secondary link-underline link-underline-opacity-0" href="#">Career</a></li>

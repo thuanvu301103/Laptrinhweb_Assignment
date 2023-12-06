@@ -70,7 +70,7 @@ $router->addRoute('/addproduct', function ($url) {
 	print_r($addproduct->view());
 });
 
-$router->addRoute('/map', function($url){
+$router->addRoute('/about', function ($url) {
 	$pharmacy = new PharmacyController();
 	print_r($pharmacy->view());
 });
