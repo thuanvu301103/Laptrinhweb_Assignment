@@ -59,7 +59,7 @@ $total = 0;
           <div class="d-flex flex-column align-items-stretch w-100 my-2">
             <h1><span class="fs-2 text-dark" style="font-weight: 900;">Your cart</span></h1>
             <div class="d-flex flex-row gap-4 p-2 align-items-start">
-              <div class="rounded-4 border border-dark-subtle border-1 p-4 flex-fill d-flex flex-column align-items-stretch">
+              <div class="rounded-4 border gap-5 border-dark-subtle border-1 p-4 flex-fill d-flex flex-column align-items-stretch">
                 <?php while ($item = $cartItems->fetch_assoc()) {
                   $imageURL = '../assets/images/' . $item['productname'] . '.jpg';
                   $pro = $item['price'] * $item['quantity'];
@@ -72,19 +72,23 @@ $total = 0;
                     <!-- product name, size, color -->
                     <div class="d-flex flex-row justify-content-between align-items-stretch flex-fill">
                       <div class="d-flex flex-column gap-1">
-                        <span class="fs-4" style="font-weight: 800;">Product name</span>
+                        <span class="fs-4" style="font-weight: 800;"><?php echo $item['productname']; ?></span>
                         <div class="d-flex flex-column">
                           <span class="fs-6 fw-bold">Size: <span class="text-light-emphasis fw-lighter">Large</span></span>
                           <span class="fs-6 fw-bold">Color: <span class="text-light-emphasis fw-lighter">White</span></span>
                         </div>
                         <div class="flex-fill d-flex flex-column justify-content-end">
-                          <span class="fs-5" style="font-weight:900;">$100</span>
+                          <span class="fs-5" style="font-weight:900;"><?php echo $item['price'] . 'đ'; ?></span>
                         </div>
                       </div>
                       <div class="d-flex flex-column align-items-end" style="justify-content: space-between;">
-                        <button class="btn bg-transparent border-0 d-flex justify-content-center align-items-center" style="width: 32px; height: 32px;">
-                          <iconify-icon icon="mdi:trash-can-outline" width="24" height="24" class="text-danger"></iconify-icon>
-                        </button>
+                        <form action="../controllers/cart_processing.php" method="POST">
+                          <input type="hidden" name="userID" value="<?php echo $_GET['userid'] ?>" />
+                          <input type="hidden" name="productID" value="<?php echo $item['pid'] ?>" />
+                          <button type="submit" name="action" value="Remove" class=" btn bg-transparent border-0 d-flex justify-content-center align-items-center" style="width: 32px; height: 32px;">
+                            <iconify-icon icon="mdi:trash-can-outline" width="24" height="24" class="text-danger"></iconify-icon>
+                          </button>
+                        </form>
                         <div class="d-flex flex-row gap-2 justify-content-center align-items-center bg-body-secondary rounded-pill">
                           <button class="btn bg-transparent border-0 d-flex justify-content-center align-items-center">
                             <iconify-icon icon="mdi:minus" width="24" height="24"></iconify-icon>
@@ -106,26 +110,35 @@ $total = 0;
                 <div class="d-flex flex-column">
                   <div class="d-flex flex-row justify-content-between align-items-center">
                     <span class="fs-6 fw-light text-light-emphasis">Subtotal</span>
-                    <span class="fs-5" style="font-weight:900;">$100</span>
+                    <span class="fs-5" style="font-weight:900;"><?php echo $total . 'đ'; ?></span>
                   </div>
                   <div class="d-flex flex-row justify-content-between align-items-center">
                     <span class="fs-6 fw-light text-light-emphasis">Discount</span>
-                    <span class="fs-5" style="font-weight:900;">-$10</span>
+                    <span class="fs-5" style="font-weight:900;">-0đ</span>
                   </div>
                   <div class="d-flex flex-row justify-content-between align-items-center">
                     <span class="fs-6 fw-light text-light-emphasis">Delivery fee</span>
-                    <span class="fs-5" style="font-weight:900;">$10</span>
+                    <span class="fs-5" style="font-weight:900;">10000đ</span>
                   </div>
                   <hr class="my-2">
                   <div class="d-flex flex-row justify-content-between align-items-center">
                     <span class="fs-6 fw-semibold text-light-emphasis">Total</span>
-                    <span class="fs-5" style="font-weight:900;">$100</span>
+                    <span class="fs-5" style="font-weight:900;"><?php echo $total + 10000 . 'đ'; ?></span>
                   </div>
                 </div>
-                <button class="btn btn-dark rounded-pill py-3 d-flex flex-row gap-1 justify-content-center">
-                  <span>Go to checkout</span>
-                  <iconify-icon icon="mdi:chevron-right" width="24" height="24"></iconify-icon>
-                </button>
+                <?php
+                $transaction = $cart->getCart($_GET['userid'])->fetch_all(MYSQLI_ASSOC);
+                $transaction = base64_encode(serialize($transaction));
+                ?>
+
+                <form style="text-align: center;" action="../controllers/cart_processing.php" method="POST">
+                  <button type="submit" name="action" value="Purchase" class="btn btn-dark rounded-pill py-3 d-flex flex-row gap-1 justify-content-center">
+                    <span>Go to checkout</span>
+                    <iconify-icon icon="mdi:chevron-right" width="24" height="24"></iconify-icon>
+                  </button>
+                  <input type="hidden" name="userID" value="<?php echo $_GET['userid'] ?>" />
+                  <input style="display: none;" type="hidden" name="transaction" value="<?php echo $transaction ?>" />
+                </form>
               </div>
             </div>
           </div>
