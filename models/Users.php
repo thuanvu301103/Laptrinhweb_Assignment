@@ -1,13 +1,14 @@
 <?php
 
 
-function generate_string($input, $strength = 16) { 
-    $input_length = strlen($input); 
-    $random_string = ''; 
-    for($i = 0; $i < $strength; $i++) { 
-        $random_character = $input[mt_rand(0, $input_length - 1)]; 
-        $random_string .= $random_character; 
-    } 
+function generate_string($input, $strength = 16)
+{
+    $input_length = strlen($input);
+    $random_string = '';
+    for ($i = 0; $i < $strength; $i++) {
+        $random_character = $input[mt_rand(0, $input_length - 1)];
+        $random_string .= $random_character;
+    }
     return $random_string;
 }
 
@@ -68,7 +69,7 @@ class Users
             $_SESSION['fullname'] = $row['firstname'] . " " . $row['lastname'];
             $_SESSION['phone'] = $row['phone'];
             $_SESSION['role'] = $row['role'];
-            if($row['role'] != 'admin'){
+            if ($row['role'] != 'admin') {
                 header("Location: ../index.php/home");
             } else {
                 header("Location: ../index.php/admin?userid=" . $_SESSION['id']);
@@ -131,7 +132,7 @@ class Users
         if (mysqli_num_rows($result) > 0) // The username already exists
         {
             $sql2 =
-            "UPDATE users
+                "UPDATE users
             SET firstname = '$this->FirstName',lastname ='$this->LastName',phone = '$this->Phone'
             WHERE username = '$this->Username';";
             $result = $this->connection->query($sql2);
@@ -175,7 +176,7 @@ class Users
             WHERE username = '$this->Username' AND password = '$this->encodedPassword';";
             $result = $this->connection->query($sql2);
             if ($result) {
-            
+
                 $url = "../controllers/logout.php";
                 echo "<script type='text/javascript'>alert('Password Changed');</script>";
                 header("Location: $url");
@@ -190,7 +191,8 @@ class Users
             return false;
         }
     }
-    public function getListAccount(){
+    public function getListAccount()
+    {
 
         $sql_cmd = "SELECT * FROM users WHERE role = 'staff'";
         $result = $this->connection->query($sql_cmd);
@@ -202,16 +204,18 @@ class Users
             return $result;
         }
     }
-    public function removeStaff($userID) {
+    public function removeStaff($userID)
+    {
         $remove = "DELETE FROM `users` WHERE `uid` = '$userID'";
         mysqli_query($this->connection, $remove);
-        
+
         $this->connection->close();
         return true;
     }
 
-    public function addStaff() {
-        
+    public function addStaff()
+    {
+
         $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $Username = generate_string($permitted_chars, 15);
         $Password = 'Staff123';
