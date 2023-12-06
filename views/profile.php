@@ -33,43 +33,57 @@ $total = 0;
                 <li class="nav-item w-100">
                     <a href="./homepage.php" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-home"></i>
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            Home
+                        <svg class="bi me-2" width="16" height="16">
+                            <use xlink:href="#home"></use>
+                        </svg>
+                        Home
                     </a>
                 </li>
                 <li class="nav-item w-100">
-                    <a href="<?php if(isset($_SESSION['id'])) {echo "./transaction?userid=".$_SESSION['id'];}?>" class="nav-link text-white" aria-current="page">
+                    <a href="<?php if (isset($_SESSION['id'])) {
+                                    echo "./transaction?userid=" . $_SESSION['id'];
+                                } ?>" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-cube"></i>
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            Order
+                        <svg class="bi me-2" width="16" height="16">
+                            <use xlink:href="#home"></use>
+                        </svg>
+                        Order
                     </a>
                 </li>
                 <li class="nav-item w-100">
                     <a href="#" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-info"></i>
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            Staff's Profile
+                        <svg class="bi me-2" width="16" height="16">
+                            <use xlink:href="#home"></use>
+                        </svg>
+                        Staff's Profile
                     </a>
                 </li>
                 <li class="nav-item w-100">
                     <a href="#" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-archive"></i>
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            Product
+                        <svg class="bi me-2" width="16" height="16">
+                            <use xlink:href="#home"></use>
+                        </svg>
+                        Product
                     </a>
                 </li>
                 <li class="nav-item w-100">
                     <a href="#" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-internet-explorer"></i>
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            Internet
+                        <svg class="bi me-2" width="16" height="16">
+                            <use xlink:href="#home"></use>
+                        </svg>
+                        Internet
                     </a>
                 </li>
                 <li class="nav-item w-100">
                     <a href="./pharmacy.php" class="nav-link text-white" aria-current="page">
                         <i class="fa fa-question"></i>
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            About
+                        <svg class="bi me-2" width="16" height="16">
+                            <use xlink:href="#home"></use>
+                        </svg>
+                        About
                     </a>
                 </li>
             </ul>
@@ -146,26 +160,26 @@ $total = 0;
                             </div>
                         <?php } else { ?>
                             <div style="text-align: center; padding: 50px;">
-                                <a class='btn btn-primary' style="font-size: 3rem;" href="./home">No transaction yet. Go buy some drugs!</a>
+                                <a class='btn btn-primary' style="font-size: 3rem;" href="./home">No transaction yet. Go buy something!</a>
                             </div>
-                            
+
                     <?php }
-                    }?>
+                    } ?>
                 </table>
             </div>
         </div>
     </div>
 
-     
-    
+
+
     <script>
-            var transaction = document.querySelector(".cart-table");
-            var userProfile = document.querySelector('.user-profile');
-            let heights = transaction.offsetHeight.toString();
-            console.log(heights);
-            userProfile.style.height = `${heights}px`;
+        var transaction = document.querySelector(".cart-table");
+        var userProfile = document.querySelector('.user-profile');
+        let heights = transaction.offsetHeight.toString();
+        console.log(heights);
+        userProfile.style.height = `${heights}px`;
     </script>
-    <?php include "footer.php";?>
+    <?php include "footer.php"; ?>
 </body>
 
 </html>
